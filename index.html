@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <title>CountDown</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="titulo">
+            <h1>READY TO LOUNCH IN<span>...</span></h1>
+        </div>
+
+        <div class="contador">
+            <div class="campo">
+                <p>Dias</p>
+                <span id="dias">00</span>
+            </div>
+
+            <span class="separador">:</span>
+
+            <div class="campo">
+                <p>Horas</p>
+                <span id="horas">00</span>
+            </div>
+
+            <span class="separador">:</span>
+
+            <div class="campo">
+                <p>Minutos</p>
+                <span id="minutos">00</span>
+            </div>
+
+            <span class="separador">:</span>
+
+            <div class="campo">
+                <p>Segundos</p>
+                <span id="segundos">00</span>
+            </div>
+        </div>
+
+        <div class="campo-inscrever">
+            <p>Inscreva-se para saber mais sobre o lançamento</p>
+
+            <button id="btn-abrir-modal">Se inscrever</button>
+        </div>
+
+        <div class="container-modal">
+            <form class="formulario-inscrever" method="GET" action="">
+                <div class="titulo-formulario">
+                    <h2>SE INSCREVER</h2>
+                </div>
+
+                <div class="campo-nome">
+                    <input type="text" id="nome" placeholder="Nome">
+                </div>
+
+                <div class="campo-email">
+                    <input type="email" id="email" placeholder="E-mail">
+                </div>
+
+                <button id="btn-fechar-modal">&times;</button>
+
+                <button type="submit" id="btn-enviar">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    <img class="image-rocket" src="./assets/images/rocket.svg">
+
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>

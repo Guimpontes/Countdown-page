@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../assets/images/top-image.svg'), url('../assets/images/bottom-image.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom; 
+    background-size: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    height: 380px;
+}
+
+.titulo {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--purple);
+    word-spacing: 10px;
+    letter-spacing: 6px
+}
+
+.titulo span {
+    letter-spacing: 5px;
+}
+
+.contador {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.campo {
+    /* width: 20%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--light-grey);
+    margin-bottom: 5px;
+}
+
+.campo span {
+    font-size: 4.5rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.separador {
+    height: 125px;
+    line-height: 150px;
+    font-size: 3rem;
+}
+
+.campo-inscrever {
+    width: 40%;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.campo-inscrever p {
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.campo-inscrever button {
+    width: 200px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: #fff;
+    margin-top: 45px;
+    outline: none;
+    cursor: pointer;
+}
+
+.image-rocket {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.formulario-inscrever {
+    width: 400px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.titulo-formulario h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--purple);
+    text-align: center;
+}
+
+.campo-nome, .campo-email {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 40px;
+    position: relative;
+}
+
+.campo-nome input, .campo-email input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-nome input::placeholder, .campo-email input::placeholder {
+    color: var(--black);
+    font-size: 1rem;
+}
+
+#btn-enviar {
+    width: 200px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: #fff;
+    outline: none;
+    cursor: pointer; 
+}
+
+#btn-fechar-modal {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--light-grey);
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-fechar-modal:hover {
+    transform: rotate(360deg);
+}
+
+/*Responsivo*/
+@media screen and (min-width: 1280px) {
+    .image-rocket {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .container {
+        max-width: 1100px;
+    }
+
+    .image-rocket {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        background-size: auto;
+    }
+    
+
+    .image-rocket {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+
+    .image-rocket {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contador, .campo-inscrever {
+        width: 52%
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    .contador, .campo-inscrever {
+        width: 60%
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .contador, .campo-inscrever {
+        width: 80%
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .titulo {
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+        word-spacing: 10px;
+    }
+
+    .campo p {
+        font-size: 0.8rem
+    }
+
+    .campo span {
+        font-size: 3rem
+    }
+
+    .separador {
+        height: 130px;
+        line-height: 150px;
+        font-size: 3rem;
+    }
+
+    .contador, .campo-inscrever {
+        width: 90%
+    }
+
+    .formulario-inscrever {
+        width: 350px;
+    }
+
+    .campo-nome, .campo-email {
+        width: 320px;
+    }
+
+    #btn-fechar-modal {
+        width: 35px;
+        height: 35px;
+        right: -15px;
+        top: -15px;
+    }
+
+}
