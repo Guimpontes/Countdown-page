@@ -10,6 +10,7 @@ const btnFecharModal = document.querySelector('#btn-fechar-modal');
 
 function contagemRegressiva() {
     const diaAtual = new Date();
+
     const diaDoLancamento = new Date('October 5 2022 14:38:00');
 
     const tempoRestante = diaDoLancamento - diaAtual;
