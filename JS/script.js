@@ -13,7 +13,7 @@ function contagemRegressiva() {
 
     console.log(diaAtual)
 
-    const diaDoLancamento = new Date('Janary 1 2023 15:00:00');
+    const diaDoLancamento = new Date('Janary 1 2023 00:00:00');
     const tempoRestante = diaDoLancamento - diaAtual;
 
     const days = Math.floor(tempoRestante / 1000 / 60 / 60 / 24);
